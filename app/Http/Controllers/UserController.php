@@ -26,4 +26,14 @@ class UserController extends Controller
     {
         return view('user.surnname', ['title' => 'page title', 'name' => $name, 'surname' => $surname]);
     }
+
+    public function info()
+    {
+        return view('user.info', ['title' => 'page', 'name' => 'edmon', 'age' => '18', 'salary' => '20 000р']);
+    }
+    
+    public function num3($name, $surname, $salary)
+    {
+        return view('user.num3', ['title' => 'page', 'name' => $name, 'surname' => $surname, 'salary' => $salary]);
+    }
 }
