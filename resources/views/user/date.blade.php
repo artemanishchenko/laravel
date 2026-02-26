@@ -1,5 +1,5 @@
 <x-layout>
 	<x-slot:title>
 		</x-slot>
-		<p style="{{$css}}">hello world</p>
+		{{$date}}
 </x-layout>
