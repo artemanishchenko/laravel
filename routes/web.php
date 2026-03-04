@@ -15,6 +15,9 @@ use App\Http\Controllers\CityController;
 | 8 10
 */
 
+Route::get('user/num11', [UserController::class, 'num11']);
+Route::get('user/num10', [UserController::class, 'num10']);
+Route::get('user/massiv9', [UserController::class, 'massiv9']);
 Route::get('user/massiv', [UserController::class, 'massiv']);
 Route::get('user/date', [UserController::class, 'date']);
 Route::get('user/href', [UserController::class, 'href']);
@@ -26,5 +29,3 @@ Route::get('/user/{name}/{surname}', [UserController::class, 'surnname']);
 Route::get('user/show', [UserController::class, 'show']);
 Route::get('user/{age}', [UserController::class, 'age']);
 Route::get('post/show', [PostController::class, 'show']);
-
-

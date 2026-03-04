@@ -31,42 +31,69 @@ class UserController extends Controller
     {
         return view('user.info', ['title' => 'page', 'name' => 'edmon', 'age' => '18', 'salary' => '20 000р']);
     }
-    
+
     public function num3($name, $surname, $salary)
     {
         return view('user.num3', ['title' => 'page', 'name' => $name, 'surname' => $surname, 'salary' => $salary]);
     }
 
-     public function css()
+    public function css()
     {
-        $css='color: blue';
-        return view('user.css', ['title' => 'page', 'css'=> $css ]);
+        $css = 'color: blue';
+        return view('user.css', ['title' => 'page', 'css' => $css]);
     }
 
     public function redcolor()
     {
-        $red='color:red';
-        return view('user.redcolor', ['title' => 'page', 'red' => $red ]);
+        $red = 'color:red';
+        return view('user.redcolor', ['title' => 'page', 'red' => $red]);
     }
 
     public function href()
     {
-        $text='Cсылка на сайт академии';
-        $href='https://omacademy.ru/';
-        return view('user.href', [ 'text' => $text, 'href'=>$href]);
+        $text = 'Cсылка на сайт академии';
+        $href = 'https://omacademy.ru/';
+        return view('user.href', ['text' => $text, 'href' => $href]);
     }
 
     public function date()
     {
         $date = date('d-m-Y');
-        return view('user.date',['title' => 'page', 'date' => $date]);
+        return view('user.date', ['title' => 'page', 'date' => $date]);
     }
 
     public function massiv()
     {
-        $name='artem';
-        $age='18';
-        $salary='30 000';
-        return view('user.massiv', ['name'=> $name, 'age'=>$age, 'salary'=>$salary]);
+        $name = 'artem';
+        $age = '18';
+        $salary = '30 000';
+        return view('user.massiv', ['name' => $name, 'age' => $age, 'salary' => $salary]);
+    }
+
+    public function massiv9()
+    {
+        return view('user.massiv9', ['arr' => [1, 2, 3, 4, 5, 6, 7]]);
+    }
+
+
+    public function num10()
+    {
+        $city = '';
+        return view('user.num10', ['title' => 'page', 'city' => $city]);
+    }
+
+    public function num11()
+    {
+        $country = 'германия';
+        $city = 'кельн';
+        return view('user.num11', ['title' => 'page', 'location' => ['country' => $country, 'city' => $city]]);
+    }
+
+    public function num12()
+    {
+        $year = '';
+        $month = '';
+        $day = '';
+        return view('user.num12', ['title' => 'page', 'year' => $year, 'month' => $month, 'day' = $day]);
     }
 }
