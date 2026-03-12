@@ -94,6 +94,43 @@ class UserController extends Controller
         $year = '';
         $month = '';
         $day = '';
-        return view('user.num12', ['title' => 'page', 'year' => $year, 'month' => $month, 'day' = $day]);
+        return view('user.num12', ['title' => 'page', 'year' => $year, 'month' => $month, 'day' => $day]);
     }
+
+    public function num13()
+    {
+        $str = '<b>text</b>';
+        return view('user.num13', ['title' => 'page', 'str' => $str ]);
+    }
+
+    public function num14()
+    {
+        $str = '<b>text</b>';
+        return view('user.num14', ['title' => 'page', 'str' => $str ]);
+    }
+
+     public function num15()
+    {
+        $age = 18;
+        return view('user.num15', ['title' => 'page', 'age' => $age]);
+    }
+
+    public function num16()
+    {
+        $age = 6;
+        return view('user.num16', ['title' => 'page', 'age' => $age]);
+    }
+
+    public function num17()
+    {
+        $age = 6;
+        return view('user.num17', ['title' => 'page', 'age' => $age]);
+    }
+
+    public function num18()
+    {
+        return view('user.num18', ['title' => 'page', 'arr' => [1,2,3]]);
+    }
+
+    
 }

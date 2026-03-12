@@ -15,6 +15,13 @@ use App\Http\Controllers\CityController;
 | 8 10
 */
 
+Route::get('user/num18', [UserController::class, 'num18']);
+Route::get('user/num17', [UserController::class, 'num17']);
+Route::get('user/num16', [UserController::class, 'num16']);
+Route::get('user/num15', [UserController::class, 'num15']);
+Route::get('user/num14', [UserController::class, 'num14']);
+Route::get('user/num13', [UserController::class, 'num13']);
+Route::get('user/num12', [UserController::class, 'num12']);
 Route::get('user/num11', [UserController::class, 'num11']);
 Route::get('user/num10', [UserController::class, 'num10']);
 Route::get('user/massiv9', [UserController::class, 'massiv9']);
