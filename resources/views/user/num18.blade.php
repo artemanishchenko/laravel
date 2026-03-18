@@ -1,12 +1,11 @@
 <x-layout>
-    <x-slot:title>
-    {{$title}} - site.com     
-    </x-slot>
-
+	<x-slot:title>
+		{{ $title }} - site.com
+	</x-slot>
     @if (count($arr)>0)
-    @php
-    @endphp
-    @else
-    кол-во элементов в массиве = 0
-    @endif
+     {{ array_sum($arr) }}
+     @endif
+     @if (count($arr)==0)
+     В массиве нет элементов
+     @endif
 </x-layout>

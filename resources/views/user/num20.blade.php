@@ -5,7 +5,7 @@
 
   <ul>
 		@foreach ($arr as $elem)
-			<li>{{ $elem }}</li>
+			<li>{{ $elem*$elem }}</li>
 		@endforeach
 	</ul>
 

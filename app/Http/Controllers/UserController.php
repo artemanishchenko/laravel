@@ -129,8 +129,103 @@ class UserController extends Controller
 
     public function num18()
     {
-        return view('user.num18', ['title' => 'page', 'arr' => [1,2,3]]);
+        return view('user.num18', ['title' => 'page', 'arr' => [1,2,3,4]]);
     }
 
+    public function num19()
+    {
+        return view('user.num19', ['title' => 'page', 'arr' => [1,2,3,4]]);
+    }
+
+    public function num20()
+    {
+        return view('user.num20', ['title' => 'page', 'arr' => [1,2,3,4]]);
+    }
+
+    public function num21()
+    {
+        return view('user.num21', ['title' => 'page', 'arr' => [4,9,16,25]]);
+    }
+
+    public function num22()
+    {
+        return view('user.num22', ['title' => 'page', 'arr' => ['1'=>10, '2'=>20, '3'=>30]]);
+    }
+
+     public function num23()
+    {
+        return view('user.num23', ['title' => 'page', 'arr' => ['1'=>10, '2'=>20, '3'=>30]]);
+    }
+
+     public function num24()
+    {
+        return view('user.num24', ['title' => 'page', 'arr' => [1,2,3,4,5,6,7,8,9,10]]);
+    }
+
+
+    public function num25()
+    {
+        $date='22-04-2022';
+        return view('user.num25', ['title' => 'page', 'date' => $date]);
+    }
     
+    public function num26(): mixed
+    {
+        return view('user.num26', ['title' => 'page', 'arr' => [[1,2,3],[4,5,6]] ]);
+    }
+
+    public function num27(): mixed
+    {   
+        $employees = [
+		[
+			'name' => 'user1',
+			'surname' => 'surname1',
+			'salary' => 1000,
+		],
+		[
+			'name' => 'user2',
+			'surname' => 'surname2',
+			'salary' => 2000,
+		],
+		[
+			'name' => 'user3',
+			'surname' => 'surname3',
+			'salary' => 3000,
+		],
+	];
+
+        return view('user.num27', ['title' => 'page', 'employees' => $employees]);
+    }
+    
+
+    public function num29()
+    {
+        return view('user.num29', ['title' => 'page', 'users' => ['user1'=> 'artem1', 'user2'=>'artem2', 'user3'=>'edmon']]);
+    }
+
+    public function num30()
+    {
+        return view('user.num30', ['title' => 'page', 'strs' => ['str1'=> 'stroka1', 'str2'=>'stroka2', 'str3'=>'stroka3']]);
+    
+    }
+
+    public function num31()
+    {
+        return view('user.num31', ['title' => 'page', 'strs' => ['str1'=> 'stroka1', 'str2'=>'stroka2', 'str3'=>'stroka3']]);
+    
+    }
+
+     public function num32()
+    {
+        $first = 'color: blue';
+        $last = 'color: red';
+        return view('user.num32', ['title' => 'page', 'strs' => ['str1'=> 'stroka1', 'str2'=>'stroka2', 'str3'=>'stroka3'], 'first'=>$first,'last'=>$last]);
+    
+    }
+
+    public function num33()
+    {
+        return view('user.num33', ['title' => 'page', 'arr'=>[1,2,3,4,5,6,7,8,9,]]);
+    
+    }
 }

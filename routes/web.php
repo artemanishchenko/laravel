@@ -15,6 +15,20 @@ use App\Http\Controllers\CityController;
 | 8 10
 */
 
+Route::get('user/num33', [UserController::class, 'num33']);
+Route::get('user/num32', [UserController::class, 'num32']);
+Route::get('user/num31', [UserController::class, 'num31']);
+Route::get('user/num30', [UserController::class, 'num30']);
+Route::get('user/num29', [UserController::class, 'num29']);
+Route::get('user/num27', [UserController::class, 'num27']);
+Route::get('user/num26', [UserController::class, 'num26']);
+Route::get('user/num25', [UserController::class, 'num25']);
+Route::get('user/num24', [UserController::class, 'num24']);
+Route::get('user/num23', [UserController::class, 'num23']);
+Route::get('user/num22', [UserController::class, 'num22']);
+Route::get('user/num21', [UserController::class, 'num21']);
+Route::get('user/num20', [UserController::class, 'num20']);
+Route::get('user/num19', [UserController::class, 'num19']);
 Route::get('user/num18', [UserController::class, 'num18']);
 Route::get('user/num17', [UserController::class, 'num17']);
 Route::get('user/num16', [UserController::class, 'num16']);

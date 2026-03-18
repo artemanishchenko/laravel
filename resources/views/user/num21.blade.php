@@ -5,7 +5,7 @@
 
   <ul>
 		@foreach ($arr as $elem)
-			<li>{{ $elem }}</li>
+			<li>{{Sqrt($elem)  }} </li>
 		@endforeach
 	</ul>
 
