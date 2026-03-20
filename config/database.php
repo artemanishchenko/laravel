@@ -180,4 +180,11 @@ return [
 
     ],
 
+    'dbal' => [
+	    'types' => [
+	        'timestamp' => TimestampType::class,
+	    ],
+	],
+
+
 ];
