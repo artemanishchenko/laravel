@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-			$table->string('title', 100)->change();
-		});
+        Schema::table('users2', function (Blueprint $table) {
+             $table->string('email')->comment('my comment');
+             $table->integer('salary')->default('0');
+            
+        });
     }
 
     /**

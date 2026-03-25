@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-			$table->string('title');
-			$table->text('desc');
-		});
-
+        Schema::table('users2', function(Blueprint $table) {
+            $table->integer('age')->nullable()->unsigned();
+        });
     }
 
     /**
