@@ -14,7 +14,11 @@ use App\Http\Controllers\CityController;
 | be assigned to the "web" middleware group. Make something great!
 | 8 10
 */
-
+Route::get('user/ex2', [UserController::class, 'ex2']);
+Route::get('user/num100', [UserController::class, 'num100']);
+Route::get('database/num1', [UserController::class, 'num1']);
+Route::get('user/shows', [UserController::class, 'shows']);
+Route::get('user/showsql', [UserController::class, 'showsql']);
 Route::get('user/num33', [UserController::class, 'num33']);
 Route::get('user/num32', [UserController::class, 'num32']);
 Route::get('user/num31', [UserController::class, 'num31']);

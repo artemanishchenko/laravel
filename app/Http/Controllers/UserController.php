@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB; 
+
 
 class UserController extends Controller
 {
@@ -229,5 +231,21 @@ class UserController extends Controller
     
     }
 
-    
+    public function showsql() 
+    {
+        $posts=DB::table('posts8')->get();
+        return view('user.showsql', ['title' => 'page', 'posts'=>$posts]);
+    }
+
+   public function num100() 
+    {
+        $users8=DB::table('users8')->get();
+        dump($users8);
+    }
+
+    public function ex2()
+    {
+        $users8=DB::table('users8')->get();
+        return view('user.ex2',['title' => 'page', 'users8'=>$users8]);
+    }
 }
