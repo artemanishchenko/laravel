@@ -246,6 +246,73 @@ class UserController extends Controller
     public function ex2()
     {
         $users8=DB::table('users8')->get();
-        return view('user.ex2',['title' => 'page', 'users8'=>$users8]);
+        foreach ($users8 as $user) {
+            dump($user);
+        }
+    }
+
+    public function ex3()
+    {
+        $users8 = DB::table('users8')->get();
+			return view('user.ex3', ['title' => 'page title' , 'users8' => $users8]);
+    }
+
+    public function ex4()
+    {
+        DB::table('posts8')->where('id', '!=', 2)->dd(); 
+        //$query = DB::table('posts8')->where('id', '>', 2)->toSql();
+		//	dump($query);
+
+    }
+
+    public function ex5()
+    {
+         DB::enableQueryLog();
+			DB::table('posts8')->where('id', '>', 2)->get();
+			dump(DB::getQueryLog());
+    }
+
+    public function ex6()
+    {
+        $users8 = DB::table('users8')->get();
+			return view('user.ex6', ['title' => 'page title' , 'users8' => $users8]);
+
+    }
+
+    public function ex7()
+    {
+        //$users8 = DB::table('users8')->select('name','email as user_email')->get();
+        return view('user.ex7', ['title' => 'page title' , 'users8' => $users8]);
+    }
+
+
+    public function ex8()
+    {
+        $users8= DB::table('users8')->where('age',30)->get();
+        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex9()
+    {
+        $users8= DB::table('users8')->where('age','!=',30)->get();
+        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex10()
+    {
+        $users8= DB::table('users8')->where('age','>',30)->get();
+        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex11()
+    {
+        $users8= DB::table('users8')->where('age','<',30)->get();
+        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex12()
+    {
+        $users8= DB::table('users8')->where('age','<',30)->where('age',30)->get();
+        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
     }
 }
