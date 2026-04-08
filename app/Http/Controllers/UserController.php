@@ -295,24 +295,82 @@ class UserController extends Controller
     public function ex9()
     {
         $users8= DB::table('users8')->where('age','!=',30)->get();
-        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+        return view('user.ex9', ['title' => 'page title', 'users8' => $users8]);
     }
 
     public function ex10()
     {
         $users8= DB::table('users8')->where('age','>',30)->get();
-        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+        return view('user.ex10', ['title' => 'page title', 'users8' => $users8]);
     }
 
     public function ex11()
     {
         $users8= DB::table('users8')->where('age','<',30)->get();
-        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+        return view('user.ex11', ['title' => 'page title', 'users8' => $users8]);
     }
 
     public function ex12()
     {
         $users8= DB::table('users8')->where('age','<',30)->where('age',30)->get();
-        return view('user.ex8', ['title' => 'page title', 'users8' => $users8]);
+        return view('user.ex12', ['title' => 'page title', 'users8' => $users8]);
     }
+
+    public function ex13() {
+        $users8=DB::table('users8')->whereBetween('age',[20,30])->get();
+        return view('user.ex13', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex14() {
+        $users8=DB::table('users8')->where('id', '>',4)->orWhere(function($query){$query
+            ->where('age', '>',30);})
+        ->get();
+        return view('user.ex14', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex15() {
+        $users8=DB::table('users8')->where('id', '>',4)->orWhere(function($query){$query
+            ->where('age', '>',19);})
+        ->get();
+        return view('user.ex15', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex16() {
+        $users8=DB::table('users8')->where('salary', 500)->orWhere(function($query){$query
+            ->whereBetween('age',[20,30]);})
+        ->get();
+        return view('user.ex16', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex17() {
+        $users8=DB::table('users8')->where('age', [20,30])->orWhere(function($query){$query
+            ->where('salary',[400,800]);})
+        ->get();
+        return view('user.ex17', ['title' => 'page title', 'users8' => $users8]);
+    }
+
+    public function ex18() {
+        $users8=DB::table('users8')->where('id',3)->first();
+        dump($users8);
+    }
+
+   public function ex37() {
+        $users8=DB::table('users8')->where('age', '>',15)->oldest()->get();
+        return view('user.ex37', ['title' => 'page title', 'users8' => $users8]);
+   }
+
+
+   public function ex40() {
+        $users8=DB::table('users8')->inRandomOrder()->get();
+        return view('user.ex40', ['title' => 'page title', 'users8' => $users8]);
+   }
+
+      public function ex41() {
+        $users8=DB::table('users8')->inRandomOrder()->first();
+        dump($users8);
+   }
+   
+
+    
+
 }

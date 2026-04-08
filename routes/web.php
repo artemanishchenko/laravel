@@ -14,7 +14,16 @@ use App\Http\Controllers\CityController;
 | be assigned to the "web" middleware group. Make something great!
 | 8 10
 */
-
+Route::get('user/ex41', [UserController::class, 'ex41']);
+Route::get('user/ex40', [UserController::class, 'ex40']);
+Route::get('user/ex37', [UserController::class, 'ex37']);
+Route::get('user/ex18', [UserController::class, 'ex18']);
+Route::get('user/ex17', [UserController::class, 'ex17']);
+Route::get('user/ex16', [UserController::class, 'ex16']);
+Route::get('user/ex15', [UserController::class, 'ex15']);
+Route::get('user/ex14', [UserController::class, 'ex14']);
+Route::get('user/ex13', [UserController::class, 'ex13']);
+Route::get('user/ex13', [UserController::class, 'ex13']);
 Route::get('user/ex12', [UserController::class, 'ex12']);
 Route::get('user/ex11', [UserController::class, 'ex11']);
 Route::get('user/ex10', [UserController::class, 'ex10']);
