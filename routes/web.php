@@ -14,6 +14,9 @@ use App\Http\Controllers\CityController;
 | be assigned to the "web" middleware group. Make something great!
 | 8 10
 */
+
+Route::get('post/{id}', [PostController::class, 'getAll']);
+Route::get('post/getAll', [PostController::class, 'getAll']);
 Route::get('user/ex41', [UserController::class, 'ex41']);
 Route::get('user/ex40', [UserController::class, 'ex40']);
 Route::get('user/ex37', [UserController::class, 'ex37']);
