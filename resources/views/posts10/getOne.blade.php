@@ -11,7 +11,7 @@
     </tr>
 @foreach ($posts10 as $post )
     <tr>
-        <td>{{ $post -> id }}</td>
+        <td>{{ $post -> $id }}</td>
         <td>{{ $post -> title }}</td>
         <td>{{ $post -> desc }}</td>
         <td>{{ $post -> text }}</td>
