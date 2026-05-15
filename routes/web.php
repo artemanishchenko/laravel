@@ -14,6 +14,10 @@ use App\Http\Controllers\CityController;
 | be assigned to the "web" middleware group. Make something great!
 | 8 10
 */
+
+Route::get('post/change', [PostController::class, 'change']);
+Route::post('post/new/', [PostController::class, 'store']);//обработка
+Route::get('post/new/', [PostController::class, 'newpost']);//отоброжение
 Route::get('post/get/{order}/{dir}', [PostController::class, 'get']);
 Route::get('post/getAll', [PostController::class, 'getAll']);
 Route::get('post/getOne/{id}', [PostController::class, 'getOne']);
